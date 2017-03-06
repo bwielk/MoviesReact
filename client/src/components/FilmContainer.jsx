@@ -19,6 +19,7 @@ var FilmContainer = React.createClass({
   render: function(){
     return (
       <div className = "film-container">
+        <h1> Movies </h1>
         <FilmList films ={this.state.data}/>
       </div>
       );

@@ -3,19 +3,21 @@ var Film  = require('./Film.jsx');
 
 var FilmList = React.createClass({
 
+  propTypes: {
+    films: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+  },
 
+  render: function(){
+    var filmNodes = this.props.films.map(function(film){
+      return (<Film  url = {film.url} title = {film.title} showtime = {film.showtime}></Film> )
+    })
 
-render: function(){
-  var filmNodes = this.props.comments.map(function(comment){
-    return (<Film  url = {this.props.url} title = {this.props.title} showtime = {this.props.showtime}></Film> )
-  })
-
-  return (
-    <div className = "film-list">
-    { filmNodes }
-    </div>
-    );
-}
+    return (
+      <div className = "film-list">
+      { filmNodes }
+      </div>
+      );
+  }
 });
 
 module.exports = FilmList;

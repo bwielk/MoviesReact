@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var CommentContainer = require('./components/FilmContainer.jsx');
+var FilmContainer = require('./components/FilmContainer.jsx');
 
 window.onload = function(){
   ReactDOM.render(
