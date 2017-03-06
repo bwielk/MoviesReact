@@ -1,5 +1,5 @@
 var React = require('react');
-var FilmList = requite('./FilmList.jsx');
+var FilmList = require('./FilmList.jsx');
 
 var sampleMovies = [
   {
